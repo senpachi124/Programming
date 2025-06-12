@@ -1,0 +1,134 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: pink;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    background: pink;
+    border-radius: 10px;
+    border: 3px solid purple;  /* Added border */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 300px;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: purple;
+    margin-bottom: 20px;
+    animation: bounce 2.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: purple;
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: pink;
+    border-radius: 10px;
+    border: 1px solid purple;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+    width: 90%; /* Use percentage for responsiveness */
+    max-width: 400px;
+    text-align: center; /* Center text and button */
+}
+
+.popup h2 {
+    margin: 0;
+    color: purple;
+    font-size: 1.8em; /* Font size for the h2 element */
+    text-align: center; /* Center the text */
+}
+
+.popup button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Add some space above the button */
+    display: inline-block; /* Ensure the button is treated as inline element */
+}
+
+.popup button:hover {
+    background-color: #45a049;
+}
+
+/* Overlay Styles */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em; /* Smaller heading on mobile */
+    }
+
+    p {
+        font-size: 1em; /* Smaller paragraph text on mobile */
+    }
+
+    button {
+        padding: 8px 16px; /* Smaller button padding on mobile */
+        font-size: 0.9em; /* Smaller button text on mobile */
+    }
+
+    .popup h2 {
+        font-size: 1.5em; /* Smaller font size for h2 on mobile */
+    }
+}
