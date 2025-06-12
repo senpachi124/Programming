@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff6b81, #ff9a8b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    background-size: 400% 400%;
+    animation: gradientAnimation 5s ease infinite;
+}
+
+/* Animation for gradient background */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 100% 50%;
+    }
+    50% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Container for the main content */
+.container {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    padding: 40px 50px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 3px solid #8B0000; /* Dark red border */
+}
+
+/* Styling for the new GIF */
+.valentine-gif {
+    width: 300px; /* Increased size */
+    margin: 0 auto 20px;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Message and button styles */
+.message {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #ff4b5c;
+    margin-bottom: 15px;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 2px;
+}
+
+.subtext {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #ff6b81;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+}
+
+.buttons {
+    margin-bottom: 30px;
+}
+
+/* Button style for Yes and No */
+.button {
+    text-decoration: none;
+    padding: 12px 35px;
+    background-color: #ff4b5c;
+    color: white;
+    border-radius: 30px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Quicksand', sans-serif;
+    margin: 10px;
+}
+
+.button:hover {
+    background-color: #ff9a8b;
+    transform: translateY(-3px);
+}
+
+.button:active {
+    transform: translateY(1px);
+}
+
+/* Add styles for your response message and stickers */
+.response-message {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.response-message.yes {
+    color: green;
+}
+
+.response-message.no {
+    color: red;
+}
+
+.sticker {
+    width: 50px;
+    height: 50px;
+    background: url('sticker.gif') no-repeat center center;
+    position: absolute;
+    animation: moveSticker 2s forwards;
+}
+
+@keyframes moveSticker {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(100px, 100px);
+    }
+}
+
+.firework {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    position: absolute;
+    border-radius: 50%;
+    animation: fireworksAnimation 5s ease-out;
+}
+
+@keyframes fireworksAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+/* Default mobile styles */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Adjust text size for mobile */
+    }
+
+    .container {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .message {
+        font-size: 2em; /* Slightly smaller text */
+    }
+
+    .valentine-gif {
+        width: 250px; /* Adjust GIF size for mobile */
+    }
+
+    .subtext {
+        font-size: 1.1em;
+    }
+
+    .button {
+        padding: 10px 20px; /* Adjust button size */
+        font-size: 1em; /* Adjust font size */
+    }
+
+    .response-message {
+        font-size: 18px; /* Adjust response message size */
+    }
+}
+
+/* Medium to large mobile screens (portrait/landscape tablets) */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+        width: 85%;
+    }
+
+    .message {
+        font-size: 1.8em;
+    }
+
+    .valentine-gif {
+        width: 220px; /* Smaller GIF size */
+    }
+
+    .subtext {
+        font-size: 1em;
+    }
+
+    .button {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+
+    .response-message {
+        font-size: 16px;
+    }
+}
+
+/* Larger screens (e.g., tablets, larger phones) */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 450px; /* Adjust the max width */
+    }
+
+    .valentine-gif {
+        width: 270px; /* Adjust GIF size */
+    }
+}
+
+/* Desktop and larger devices */
+@media (min-width: 1025px) {
+    .container {
+        max-width: 500px; /* Keep max-width for larger screens */
+    }
+
+    .valentine-gif {
+        width: 300px;
+    }
+
+    .message {
+        font-size: 2.5em; /* Keep font-size for desktop */
+    }
+
+    .button {
+        padding: 12px 35px; /* Keep button padding */
+    }
+}

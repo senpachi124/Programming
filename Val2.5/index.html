@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- New GIF above the h1 -->
+        <img src="https://media.tenor.com/ftlD4O1mfJ8AAAAM/banana-cat-banana.gif" alt="Valentine's GIF" class="valentine-gif">
+
+        <h1 class="message">Can you be my Valentine?</h1>
+        <p class="subtext">A little love in the air 💖</p>
+        <div class="buttons">
+            <button id="yesButton" class="button" aria-label="Yes, be my Valentine">Yes ><</button>
+            <button id="noButton" class="button" aria-label="No, I don't want to">No!</button>
+        </div>
+        <div id="responseMessage" class="response-message"></div>
+    </div>
+
+    <!-- Spinning cat image -->
+    <img id="spinningCat" src="https://media.tenor.com/BNby1AnlynMAAAAM/spinning-spining-cat.gif" alt="Spinning Cat" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200px; z-index: 9999;">
+    <div id="stickers"></div>
+    <div id="fireworksContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
