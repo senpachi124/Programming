@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Arail", "Cambria";
+    background-color: #098665;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container p {
+    color: black;
+}
+
+.profile-card {
+    background-color: #d8e4bc;
+    border-radius: 15px;
+    border: 3px solid purple;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 30px;
+    width: 320px;
+    transition: transform 0.3s;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;     /* Makes it a circle */
+    border: 2px solid purple;
+    object-fit: cover;      /* Ensures the image fills the circle */
+    margin-bottom: 15px;
+}
+
+.name {
+    font-size: 26px;
+    color: #333;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.bio {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.location, .skills, .hobbies {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+    margin-top: 40px;
+}
+
+.social-link {
+    text-decoration: none;
+    color: #4a90e2;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-link:hover {
+    color: #0073e6;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .profile-card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .profile-picture {
+        width: 80px;
+        height: 80px;
+    }
+
+    .name {
+        font-size: 22px;
+    }
+
+    .bio {
+        font-size: 14px;
+    }
+
+    .location, .skills, .hobbies {
+        font-size: 12px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-link {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-card {
+        width: 95%;
+    }
+}
+
+/* .resume-button {
+    display: inline-block;
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.resume-button:hover {
+    background-color: #0073e6;
+    transform: translateY(-2px);
+} /*
